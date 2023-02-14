@@ -17,10 +17,24 @@ public class day2 {
 			textList.add(Character.toString(letter));
 			
 		}
+		int duplicate = 0;
+		int dnumber= 0;
 		Collections.sort(textList);
 		for(int out = 0; out < textList.size(); out++)
 		{
 			System.out.println(textList.get(out));
+			if (textList.get(out)== textList.get(out+1))
+			{
+				if(dnumber == 0)
+				{
+					duplicate = duplicate+1;
+					dnumber = dnumber +1;
+				}
+				else
+				{
+					;
+				}
+			}
 		}
 	  }
 	
