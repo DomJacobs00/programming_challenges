@@ -4,13 +4,13 @@ public class day2 {
 	int duplicates;
 	ArrayList<String> textList;
 	public static void main(String[] args) {
-		ArrayList<String> textList = new ArrayList<String>();
+		
 		duplicateCount("BingBong");
 
 	}
-	public void duplicateCount(String text) {
+	public static void duplicateCount(String text) {
 	    // nested for loop with text.charAt(index)
-		
+		ArrayList<String> textList = new ArrayList<String>();
 		for(int index = 0; index < text.length(); index++)
 		{
 			char letter = text.charAt(index);
@@ -18,11 +18,9 @@ public class day2 {
 			
 		}
 		Collections.sort(textList);
-		int numDup = 0, dupCount = 0;
-		int previous = -1;
-		for (int i=0; i < textList.size(); i++)
+		for(int out = 0; out < textList.size(); out++)
 		{
-			
+			System.out.println(textList.get(out));
 		}
 	  }
 	
