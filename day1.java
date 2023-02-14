@@ -1,4 +1,9 @@
+
 public class day1 {
+	public static void main(String[] args) {
+		isNarcissistic(153);
+
+	}
     public static boolean isNarcissistic(int number) {
         String num = String.valueOf(number);
         int sum = 0;
@@ -6,9 +11,17 @@ public class day1 {
         for(int i=0; i < num.length(); i++)
         {
             int j = Character.digit(num.charAt(i), 10);
-            sum = sum + (j^num.length());
+            int power = (int) Math.pow(j, num.length());
+            sum = sum + power;
         }
-        System.out.println(sum="                  "+num)
+        if(sum == number)
+        {
+        	answer = true;
+        }
+        else
+        {
+        	answer = false;
+        }
     
     
         return answer;
