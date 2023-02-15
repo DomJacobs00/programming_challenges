@@ -17,7 +17,7 @@ public class day2 {
 		{
 			for(int index = 0; index < text.length(); index++)
 			{
-				char letter = text.charAt(index);
+				char letter = Character.toLowerCase(text.charAt(index));
 				textList.add(Character.toString(letter));
 				
 			}
