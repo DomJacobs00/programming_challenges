@@ -13,8 +13,14 @@
     <script>
         function escapeHTML(html)
         {
-            return
-            html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return (
+                html
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+
+            );
+            
 
         }
         for(i=1; i<4; i++)
