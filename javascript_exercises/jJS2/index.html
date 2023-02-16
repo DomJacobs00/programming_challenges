@@ -1,0 +1,31 @@
+<html>
+    <head>  
+        <title>JS2</title>
+    </head>
+    <div id="txt">
+        <div id="txt1"> 1     </div>
+        <div id="txt2">
+            <p> 2 </p>
+        </div>
+        <div id="txt3"> 3       </div>
+    </div>
+    <div id="innerHTMLtxt"></div>
+    <script>
+        function escapeHTML(html)
+        {
+            return
+            html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+        }
+        for(i=1; i<4; i++)
+        {
+            var x = "txt" + i;
+            var h = document.getElementById(x).innerHTML;
+            h = escapeHTML(h);
+            var t = document.getElementById(x).textContent;
+            document.write("<p>innerHTML = " + h + " textContent= "+t+"</p>")
+        }
+    </script>
+
+
+</html>
