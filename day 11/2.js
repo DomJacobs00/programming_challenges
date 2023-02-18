@@ -11,11 +11,13 @@ function minMax(arr)
     {
         tempArray.push(arr[i]);
     }
-    console.log(tempArray.length);
-    var max = 0;
-    var min = 0;
-    return[max,min];
+    tempArray.sort(function(a,b){return a - b});
+    var max = tempArray[tempArray.length-1];
+    var min = tempArray[0];
+    console.log("min:  "+min);
+    console.log("max: "+max );
+    return[min,max];
 }
 
-testarray = [1,2,3,4,5,6,7,8,9,1,1,1,1,1123123,];
+testarray = [1,2,3,4,5,6,7,8,9,1,1,1,1,1123123];
 minMax(testarray);
