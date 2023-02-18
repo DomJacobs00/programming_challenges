@@ -8,6 +8,7 @@ function towerBuilder(nFloors)
     var towerBlock = "*";
     var len = 1;
     var maxWidth = 2 * nFloors -1;
+    var tower = [];
     // using  a nested for loop building a tree
     for (i = 0; i<nFloors; i++)
     {
@@ -22,7 +23,8 @@ function towerBuilder(nFloors)
         console.log(out);
         len = len + 2;
         floor = [];
+        tower.push(out);
     }
-    
+    return tower;
 }
 towerBuilder(3);
