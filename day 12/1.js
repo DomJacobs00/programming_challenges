@@ -5,17 +5,17 @@
 
 function printerError(s)
 {
-    var goodColors = [a,b,c,d,e,f,g,h,i,j,k,l,m];
+    var goodColors = "abcdefghijklm"; //  a predetermined string that contains correct printer colors
+    var printer_errors = 0;           
     for(i = 0; i < s.length; i++)
     {
-        for(k = 0; k<goodColors.length; k++)
+        var output = goodColors.indexOf(s.charAt(i));
+        if (output < 0)
         {
-            if(s.charAt(i) == goodColors(k))
-            {
-                
-            }
+            printer_errors ++; // using index of the if statement uses the value of the index to check if it is less than 0 (does not exsist in the predeterminded string)
         }
+        
     }
-    var printer_errors = ""; 
-    return printer_errors;
+    return printer_errors + "/" + s.length;
+    printer_errors = 0;
 }
