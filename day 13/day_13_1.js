@@ -30,6 +30,19 @@ function likes(names)
     }
 
 }
+function likesnew(names)
+{
+    names = names || []; // initializes the array if it is currently unidentified
+    // using switch instead of many if loops
+    switch(names.length)
+    {//using the length of the array for each case makes the task quick and efficient
+        case 0: return 'no one likes this'; break;
+        case 1: return names[0] + ' likes this'; break;
+        case 2: return names[0] + ' and ' + names [1] + ' like this'; break;
+        case 3: return names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this'; break;
+        default: return names[0] + ', ' + names[1] + ' and ' + (names.length - 2) + ' others like this'; // if no match this case is used
+    }
+}
 test = [];
 test0 = ['Max', 'John', 'Mark'];
 test1 = ['Max'];
