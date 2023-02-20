@@ -1,26 +1,32 @@
 function likes(names)
 { 
-    var singular = " likes  this";
-    var multiple = " like  this";
-    if(names.len == 0)
+    var singular = "likes this";
+    var multiple = "like this";
+    if(names.length == 0)
     {
-        return "no one "+singular;
+        var out = "no one "+singular;
+        return out;
     }
-    if(names.len == 1)
+    if(names.length == 1)
     {
-        return names[0] +" "+singular;
+        var out = names[0] +" "+singular;
+        return out;
     }
-    if(1 < names.len < 3)
+    if(1 < names.length < 3)
     {
-        return names[0] + ", " + names[1] + multiple;
+        var out = names[0] + " and " + names[1] +" "+ multiple;
+        return out;
     }
     else
     {
         var remainder = names.length -2;
-        return names[0] + ", " + names[1]+ " and "+ remainder + " others "  + multiple;
+        var out = names[0] + ", " + names[1]+ " and "+ remainder + " others "  + multiple;
+        return out;
     }
 
 }
+test = [];
 test0 = ['Max', 'John', 'Mark'];
 test1 = ['Max'];
 test2 = ['John', 'Mark'];
+likes(test);
