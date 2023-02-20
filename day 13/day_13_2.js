@@ -14,7 +14,7 @@ function scramble(str1, str2)
             var chAr = str2[i];
             if(chAr.indexOf(str1.charAt(k))<0)
             {
-                 false;
+                outlook =  false;
                 break;
             }
             else
@@ -29,6 +29,8 @@ function scramble(str1, str2)
     
     
     
-    
+    console.log(outlook);
     return outlook;
 }
+
+test0 = ;
