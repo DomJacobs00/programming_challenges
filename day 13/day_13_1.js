@@ -12,9 +12,14 @@ function likes(names)
         var out = names[0] +" "+singular;
         return out;
     }
-    if(1 < names.length < 3)
+    if(names.length == 2)
     {
         var out = names[0] + " and " + names[1] +" "+ multiple;
+        return out;
+    }
+    if(names.length == 3)
+    {
+        var out = names[0] +", "+ names[1]+ " and " + names[2] +" "+ multiple;
         return out;
     }
     else
