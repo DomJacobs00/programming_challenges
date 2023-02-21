@@ -14,14 +14,15 @@ var maxSequence = function(arr){
     {
         return 0;
     }
-    let maxsum = 0;
-    let currentsum = 0;
+    let maxSum = 0;
+    let currentSum = 0;
     for (i = 0; i < arr.length; i++)
     {
-        
+        currentSum = Math.max(arr[i], currentSum + arr[i]);// finds the highest number and adds it to the current
+        maxSum = Math.max(maxSum, currentSum); // checks the highest number of 2 variables( max and current)
     }
 
-
+    return maxSum; // returns the highest number
 
 
   }
