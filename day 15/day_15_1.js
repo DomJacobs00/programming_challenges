@@ -1,13 +1,13 @@
 /**
- * Function that returns the sum of numbers between 2 integers including the integers themselves
+ * Function that returns the sum of numbers between 2 integers including the integers themselves.
  */
 
 function getSum(a, b)
 {
     // finding which number is higher
-    higher = 0;
-    lower = 0;
-   
+    var higher = 0;
+    var lower = 0;
+   // using higher and lower to find the higher and lower numbers to be checked
     if(a>b || a==b)
     {
         higher = a;
@@ -18,9 +18,9 @@ function getSum(a, b)
         higher = b;
         lower = a;
     }
-    sum = 0;
-    currentNum = lower;
-
+    var sum = 0;
+    var currentNum = lower;
+    // using currentNum add the numbers to sum using a for loop
     for(i=lower; i <= higher; i++)
     {
         
