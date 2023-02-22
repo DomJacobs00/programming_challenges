@@ -31,4 +31,15 @@ function getSum(a, b)
     console.log(sum);
     return sum;
 }
-getSum(-294, -288)
+
+
+function getSumBP(a, b)
+{
+    let min = Math.min(a, b);
+    let max = Math.max(a, b);
+    console.log(( max - min + 1) * ( min + max ) / 2);
+    return( max - min + 1) * ( min + max ) / 2;
+}
+
+getSum(-294, -288);
+getSumBP(-294, -288);
