@@ -1,0 +1,3 @@
+/**
+ * A chain adding function
+ */
