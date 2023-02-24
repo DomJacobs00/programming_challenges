@@ -37,6 +37,8 @@ function getSumBP(a, b)
 {
     let min = Math.min(a, b);
     let max = Math.max(a, b);
+    // using Gauss Summation it returns the answer
+    // total sum = ((number of pairs)*(sum of each pair) / 2)
     console.log(( max - min + 1) * ( min + max ) / 2);
     return( max - min + 1) * ( min + max ) / 2;
 }
