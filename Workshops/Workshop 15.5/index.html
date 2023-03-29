@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Start typing a name in the input field bellow:</p>
+<form>
+  First Name: <input type="text" onkeyup="showHint(this.value)">
+</form>
+<p>Suggestions: <span id="txtHint"></span> </p>
+<script>
+  function showHint(str)
+  {
+    if( str.length == 0)
+    {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    }
+    else
+    {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function()
+      {
+        if (this.readyState == 4 && this.status == 200)
+        {
+          var uic = document.getElementById("txtHint")
+          uic.innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "gethint.php?1=" + str, true);
+      xmlhttp.send();
+    }
+  }
+</script>
+</body>
+</html>
