@@ -5,31 +5,35 @@
     <title>Title</title>
 </head>
 <body>
-HAIWODIAHWODIAWHDOi
+<button id="pressButton">Press</button>
+<p id="buttonResponse">Not Clicked</p>
 <script>
-  // Client-side script that initializes the http request
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'send-ajax-data.php');
-  // Tracking the changes of the request.
-  xhr.onreadystatechange = function() {
-    var DONE = 4; // means the request is done.
-    var OK = 200; // is a successful return.
-    if(xhr.readyState === DONE)
-    {
-      if(xhr.status === OK)
-      {
-        console.log(xhr.responseText);
-      }
-      else
-      {
-        console.log('Error: ' + xhr.status);
-        //An error occurred during the request.
-      }
-    }
+    document.getElementById('pressButton').addEventListener('click', function(){
 
-  };
-  // sending the request to send-ajax-data.php
-  xhr.send(null);
+        // Client-side script that initializes the http request
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','send-ajax-data.php');
+        // Tracking the changes of the request.
+        xhr.onreadystatechange = function() {
+            var DONE = 4; // means the request is done.
+            var OK = 200; // is a successful return.
+            if(xhr.readyState === DONE)
+            {
+                if(xhr.status === OK)
+                {
+                    document.getElementById('buttonResponse').innerHTML = xhr.responseText;
+                }
+                else
+                {
+                    console.log('Error: ' + xhr.status);
+                    //An error occurred during the request.
+                }
+            }
+
+        };
+        // sending the request to send-ajax-data.php
+        xhr.send(null);
+    })
 
 </script>
 </body>
