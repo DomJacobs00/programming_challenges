@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <ul  id="output">
+
+  </ul>
+</div>
+<script>
+  parser = new DOMParser();
+  xmlDoc = parser.parseFromString(xmlStr, "text/xml");
+  var xmlStr = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?> <employees><employee><id>1</id><firstName>Leonardo</firstName><lastName>DiCaprio</lastName><photo>http://photos.com/Leonardo+Dicaprio7.jpg</photo></employee><employee><id>2</id><firstName>Johnny</firstName><lastName>Depp</lastName><photo>http://photos.com/johnny-depp-pirates.jpg</photo></employee><employee><id>3</id><firstName>Hritik</firstName><lastName>Roshan</lastName><photo>http://photos.com/1411921557.jpg</photo></employee></employees>";
+  x = xmlDoc.getElementsByTagName("employee");
+  for (var i = 0; i < x.length; i++)
+  {
+    newRecord = document.createElement('li');
+    newFields = document.createElement('ul');
+    for (var j = 0; j < 4; j++)
+    {
+      newField = document.createElement('li');
+      newField.innerHTML = x[i].childNodes[j].firstChild.nodeValue;
+      newFields.appendChild(newField);
+    }
+    newRecord.appendChild(newFields);
+    document.getElementById("output").appendChild(newRecord);
+
+  }
+
+</script>
+
+</body>
+</html>
